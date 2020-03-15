@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="lib/angular.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script type="text/javascript" src="lib/qrcode/qrcode.js"></script>
+    <script type="text/javascript" src="lib/qrcode/angular-qrcode.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Angular App Demo</title>
+  </head>
+
+  <!-- 'ng-app' - angular module binding -->
+  <!-- 'ng-controller' - angular controller binding -->
+  <body ng-app="anti_park_spwa" ng-controller="Main as vm">
+
+
+    
+
+    <!-- <p>we have {{vm.stickers.length}} stickers</p> -->
+    <div id="non-printable">
+	<div class="containerTop">
+      <h1 ng-blur="vm.windowEvent()">Show You Care Park Elsewhere</h1>
+	</div>
+	<br>
+		<h2>Sticker Generator</h2>
+      <img src="../generate/css/printer.gif"></img>
+      <p style="font-size:2vw;font-size:2.5vmax;color:black">Please enter the number of stickers you would like to generate and download.</p>
+      
+    <form id="form1" >
+		<div class="containerNUMSTICKER">
+			<p style="font-size:2vw;font-size:2.5vmax;color:black">Number of Stickers:</p>
+		</div>
+      <input type="number" name="numStickers" value="1">
+        <!-- binding button click to getData() function in data model -->
+		<br>
+		<br>
+      <button  ng-click="vm.postStickers()" >Generate Stickers</button> <!--POST-->
+    </form>
+    </div>
+	<br>
+    <!--Print-->
+    <div id="printbtn"> 
+        <form id="form1" >
+            <button id="btnprint"  ng-click="vm.printPage()">PRINT</button>
+          </form>
+    </div>
+    <!-- bound this list to the array containing stickers in data model -->
+    
+      <div id="print-area-1">
+        
+        <li class="sticker" style="border: 2px solid black !important; border-radius: 1em !important; padding: 1em !important; list-style-type: none !important; margin: 4em !important;" ng-repeat="sticker in vm.stickers" >
+
+        <qrcode data="https://theantiparkingcompany.github.io/SPWA_GenerateStickers/response/?&uuid={{sticker.id}}&parkapi=anti-parking-api.herokuapp&pushapi=rescuestationpush"></qrcode>
+        <p>Alternatively please try: https://theantiparkingcompany.github.io/SPWA_GenerateStickers/response/</p>
+      </li>
+    </div>
+	
+
+      
+    
+    <!-- <p id="test"></p> -->
+  </body>
+
+</html>
