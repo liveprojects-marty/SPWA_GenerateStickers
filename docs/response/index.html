@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,45 +11,48 @@
     <script src="js/app.js"></script>
     <script type="text/javascript" src="lib/qrcode/qrcode.js"></script>
     <script type="text/javascript" src="lib/qrcode/angular-qrcode.js"></script>
-    <script src="lib/uuid/angular-uuid.js" ></script>
+    <script src="lib/uuid/angular-uuid.js"></script>
     <script src="lib/instascan/instascan.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
+    <!--<div style="background-image: url('img/wallpaperv2.png'); background-image: repeat;">-->
+
 
     <title>Angular App Demo</title>
-  </head>
+</head>
 
-  <!-- 'ng-app' - angular module binding -->
-  <!-- 'ng-controller' - angular controller binding -->
-  <body ng-app="anti_park_spwa" ng-controller="Main as vm">
+<!-- 'ng-app' - angular module binding -->
+<!-- 'ng-controller' - angular controller binding -->
+<body ng-app="anti_park_spwa" ng-controller="Main as vm">
 
-
-
-    <h1>Show You Care Park Elsewhere</h1>
-    
-    <img src="../response/css/logo.png"></img>
-    
-
+    <div class="container">
+        <h1>Show You Care Park Elsewhere</h1>
+    </div>
+    <br>
+    <br />
+    <br />
     <div ng-show="vm.hasResponded===false">
-        <h2>Apologise?</h2>
-      <p>You parked without care! Someone is really bummed out :-( </p>
-      <form id="form1" >
-        <button id="yes"ng-click="vm.apologise()">Yes! I'm really sorry!</button>
-        <button id="no"ng-click="vm.refuse()">No, I don't think so!</button>
-      </form>
+        <p style="font-size:2vw;font-size:2.5vmax;color:black;">Your parking has inconvenienced someone!</p>
+        <p style="font-size:2vw;font-size:2.5vmax;color:black;">They would like you respond to them:</p>
+        <br />
+        <br />
+        <form id="form1">
+            <button id="yes" ng-click="vm.apologise()">Apologise</button>
+            <button id="no" ng-click="vm.refuse()">Ignore</button>
+        </form>
     </div>
     <div ng-show="vm.giveThanks===true">
-      <p> Thank you for responding</p>
+        <br>
+        <br>
+        <!--<div class="container4">-->
+        <p style="font-size:2vw;font-size:2.5vmax;color:black";> Thank you for responding</p><!--</div>-->
+        <br>
     </div>
-    
-    <!-- <p>we have {{vm.stickers.length}} stickers</p> -->
 
-    <!--video element must have autoplay otherwise nothing shows up on screen when you press the button-->
-    <video muted autoplay id="qr-video" style="transform: scaleX(-1);"></video>
+    <!--<div class="container2">
+        <p>Copyright</p>
+    </div>-->   
 
-    <!--bind button click event to function in data model-->
-    
-    <button id="scan" ng-click="vm.scanQRcode()" ng-show="vm.hasParams===false">Scan QR code</button>
-  </body>
+</body>
 
 </html>

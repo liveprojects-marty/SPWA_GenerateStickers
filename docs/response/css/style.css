@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +8,13 @@
 
 h1 {
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: black;
-  
+  padding-top: 10px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-align: left;
+  font-family: Saira Condensed;
 }
 
 h2 {
@@ -19,50 +23,70 @@ h2 {
   color:black;
 }
 
-p{
-  padding-bottom: 5px;
-  margin-left:10px;
-  margin-bottom:10px;
+p {
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Saira Condensed;
 }
 form#form1>button:hover{
   
   background-color: #1FEFFF;
   cursor: pointer;
 }
-form#form1>button#yes{
-  background: none;
-  border:none;
-  font-size:16px;
-  width:200px;
-  background-color:#155BB4;
-  color:white;
-  box-shadow:0px 0px 7px black;
-  border-radius: 3px;
-  display:inline-block;
-  padding-top:5px;
-  padding-bottom: 5px;
-  float:left;
-  margin-left:35%;
-  margin-right:5%;
-  
+form#form1 > button#yes {
+    background: none;
+    border: solid green 2px;
+    font-size: 35px;
+    font-family: Saira Condensed;
+    width: 60%;
+    height: 200px;
+    background-color: white;
+    color: green;
+    box-shadow: 0px 0px 15px green;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 20%;
+}
+form#form1 > button#yes:hover {
+  background-color: green;
+  color: #FFFFFF;
+  border: solid black 2px;
 }
 
-form#form1>button#no{
-  background: none;
-  border:none;
-  font-size:16px;
-  width:200px;
-  background-color:#155BB4;
-  color:white;
-  box-shadow:0px 0px 7px black;
-  border-radius: 3px;
-  display:inline-block;
-  padding-top:5px;
-  padding-bottom: 5px;
-  
-  
+form#form1 > button#no {
+    background: none;
+    border: solid red 2px;
+    font-size: 35px;
+    width: 60%;
+    height: 200px;
+    background-color: white;
+    font-family: Saira Condensed;
+    color: red;
+    box-shadow: 0px 0px 15px red;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 5px;
+    font-weight: bold;
+    position: relative;
+    left: 20%;
 }
 
+form#form1 > button#no:hover {
+  background-color: red;
+  color: #FFFFFF;
+  border: solid black 2px;
+}
 
 video#qr-video{
   display:block;
@@ -83,15 +107,13 @@ button#scan{
   padding-top:5px;
   padding-bottom: 5px;
   margin-top:5px;
-  
   margin-left:auto;
   margin-right:auto;
-  
 }
 
 
-body{
-  background-color: #FFEC6A;
+body {
+    background-color: white;
 }
 img {
   display: block;
@@ -102,4 +124,40 @@ img {
   margin-bottom:20px;
   border: solid black 6px;
   border-radius: 10px;
+}
+.container {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    background: #7289DA;
+    color: #7289DA;
+}
+.container2 {
+   background: #7289DA;
+   border: solid #23272A 1px;
+   width: 100%;
+   height: 50px;
+   color: #FFFFFF;
+   bottom: 0;
+   position: absolute;
+}
+.container3{
+  background-color: #2C2F33;
+  color: #FFFFFF;
+  border: 1px solid #7289DA;
+  width: 25%;
+  height: 130px;
+  left: 37.5%;
+  position: relative;
+  margin-bottom: 50px;
+}
+.container4{
+  background-color: #2C2F33;
+  color: #FFFFFF;
+  border: 1px solid #7289DA;
+  width: 25%;
+  height: 55px;
+  left: 37.5%;
+  position: relative;
+  margin-bottom: 50px;
 }
